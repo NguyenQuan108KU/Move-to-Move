@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348641515877151161}
-  m_Mesh: {fileID: 3174812724623785705, guid: b1e8cc7dadc040b4ea1d2a460ede3fb6, type: 3}
+  m_Mesh: {fileID: 3174812724623785705, guid: a938027f2a9b4214e89f12cd4b47ba72, type: 3}
 --- !u!23 &3539473813388833265
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,8 +64,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4874126678125670354, guid: 6c3b93d2458f7f54b916fee91dfdebbb, type: 3}
-  - {fileID: -6478536213147159724, guid: 6c3b93d2458f7f54b916fee91dfdebbb, type: 3}
+  - {fileID: -6478536213147159724, guid: 0cdafb12b394e1b4e88f00cef4a9a1e0, type: 3}
+  - {fileID: 4874126678125670354, guid: 0cdafb12b394e1b4e88f00cef4a9a1e0, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,6 +105,7 @@ MonoBehaviour:
   speedRotation: 1000
   shootDirection: {x: 0, y: 0, z: 0}
   destroyTimer: 1.5
+  owner: {fileID: 0}
 --- !u!54 &1194726180561282274
 Rigidbody:
   m_ObjectHideFlags: 0

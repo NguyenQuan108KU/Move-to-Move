@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e9f0a42a974ec742a484df297214731, type: 3}
+  m_Name: Weapon
+  m_EditorClassIdentifier: 
+  weapon:
+  - weaponName: Hammer
+    weaponImage: {fileID: 21300000, guid: 359985043579700439633ebbb97e5b93, type: 3}
+    coin: 200
+    isLock: Unlock
+  - weaponName: Candy
+    weaponImage: {fileID: 21300000, guid: ea1caec6a91f5e14b8c2f6e8a274a099, type: 3}
+    coin: 300
+    isLock: Lock
+  - weaponName: Arrow
+    weaponImage: {fileID: 21300000, guid: 34fa371bfa35cad42bb29bb1444106b8, type: 3}
+    coin: 400
+    isLock: Lock
+  - weaponName: Axe
+    weaponImage: {fileID: 21300000, guid: fa6cc6f9f8905c24d8c45a091e8ce615, type: 3}
+    coin: 500
+    isLock: Lock
+  - weaponName: Knife
+    weaponImage: {fileID: 21300000, guid: e9498015d2b7c6e46bded4dec65eb92a, type: 3}
+    coin: 600
+    isLock: Lock

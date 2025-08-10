@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet2"))
         {
             dead1.SetActive(true);
-            UIManager.instance.isDead = true;
+            UIManager.instance.StartDead();
             anim.SetBool("Death", true);
             Harmmer.SetActive(false);
             isDead = true;
@@ -148,6 +148,5 @@ public class PlayerController : MonoBehaviour
     public void DestroyPlayer()
     {
         gameObject.SetActive(false);
-        Time.timeScale = 0;
     }
 }

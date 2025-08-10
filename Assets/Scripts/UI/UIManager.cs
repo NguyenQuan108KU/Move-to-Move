@@ -29,14 +29,19 @@ public class UIManager : MonoBehaviour
     private int countNumber;
 
     [Header("Dead2")]
-    [SerializeField] private GameObject Canvas_Dead_1;
-    [SerializeField] private GameObject Canvas_Dead_2;
+    public GameObject Canvas_Dead_1;
+    public GameObject Canvas_Dead_2;
     [SerializeField] public bool isDead = false;
+    private int countdownDuration;
+    private float deadStartTime;
 
     private void Start()
     {
         enemyAliveTotal = 30;
         countNumber = 5;
+
+        countdownDuration = 5;
+        deadStartTime = Time.time;
     }
     private void Update()
     {
@@ -64,14 +69,18 @@ public class UIManager : MonoBehaviour
     }
 
     //Load khi player chết
+
+    public void StartDead()
+    {
+        isDead = true;
+        deadStartTime = Time.time; // lưu lại thời điểm chết
+    }
     public void Load()
     {
+        Canvas_Dead_1.SetActive(true);
         loadCircle.transform.rotation = Quaternion.Euler(0, 0, Time.time * -speedRotation);
-        int countdownStartTime = Mathf.RoundToInt(Time.time);
-        int countdownDuration = 5;
-        int count = countdownDuration - countdownStartTime;
-        number.text = (countdownDuration - countdownStartTime).ToString();
-        Debug.Log(count);
+        int count = countdownDuration - Mathf.FloorToInt(Time.time - deadStartTime);
+        number.text = count.ToString();
         if(count <= 0)
         {
             Canvas_Dead_1.SetActive(false);
